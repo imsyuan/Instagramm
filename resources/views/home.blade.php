@@ -7,15 +7,15 @@
             <img src="https://image.flaticon.com/icons/svg/733/733558.svg" style="height: 120px;" class="rounded-circle">
         </div>
         <div class="col-9 pt-5">
-            <h1>instagram</h1>
+            <h1>{{ $user->username }}</h1>
             <div class="d-flex">
                 <div class="pr-5"><strong>6265</strong> posts</div>
                 <div class="pr-5"><strong>3.3K</strong> followers</div>
                 <div class="pr-5"><strong>228</strong> following</div>
             </div>
-            <div class="pt-4 font-weight-bold">Instagram</div>
-            <div>Bringing you closer to the people and things you love. ❤️</div>
-            <div><a href="#">https://www.instagram.com/instagram/</a></div>
+            <div class="pt-4 font-weight-bold">{{ $user->profile->title }}</div>
+            <div>{{ $user->profile->description }}️</div>
+            <div><a href="#">{{ $user->profile->url }}</a></div>
         </div>
 
         <div class="row pt-5">
