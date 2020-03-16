@@ -23,9 +23,9 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="<?php echo e(url('/')); ?>">
-                    <?php echo e(config('app.name', 'Laravel')); ?>
-
+                <a class="navbar-brand d-flex" href="<?php echo e(url('/')); ?>">
+                    <img src="/svg/instagram.svg" style="max-height: 25px; border-right: 1px solid #333333" class="pr-3">
+                    <div class="pl-3"><?php echo e(config('app.name', 'Instagramm')); ?></div>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="<?php echo e(__('Toggle navigation')); ?>">
                     <span class="navbar-toggler-icon"></span>
