@@ -39,7 +39,7 @@ class PostsController extends Controller
 
     public function show(\App\Post $post)
     {
-        dd($post);
+        return view('posts.show',  compact('post'));
     }
 }
 
