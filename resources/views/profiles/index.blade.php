@@ -7,7 +7,10 @@
             <img src="https://image.flaticon.com/icons/svg/733/733558.svg" style="height: 120px;" class="rounded-circle">
         </div>
         <div class="col-9 pt-5">
-            <h1>{{ $user->username }}</h1>
+            <div class="d-flex justify-content-between align-items-baseline">
+                <h1>{{ $user->username }}</h1>
+                <a href="#">Add New Post</a>
+            </div>
             <div class="d-flex">
                 <div class="pr-5"><strong>6265</strong> posts</div>
                 <div class="pr-5"><strong>3.3K</strong> followers</div>
@@ -17,7 +20,7 @@
             <div>{{ $user->profile->description }}️</div>
             <div><a href="#">{{ $user->profile->url }}</a></div>
         </div>
-
+    </div>
         <div class="row pt-5">
             <div class="col-4">
                 <img src="https://scontent-tpe1-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/c0.169.1349.1349a/s640x640/90094467_2710582849165371_6111084002784298347_n.jpg?_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_cat=1&_nc_ohc=_IlnkO7h2-0AX-jO2yU&oh=90dac32460df4a1a8800bd342af35065&oe=5E9BB82B" class="w-100">
