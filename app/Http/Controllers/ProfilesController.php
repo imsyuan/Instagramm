@@ -25,9 +25,9 @@ class ProfilesController extends Controller
 
         $data = request()->validate([
            'title'  =>  'required',
-           'description'    => 'required',
+           'description'  => 'required',
            'url'    => 'url',
-           'image'    =>'',
+           'image'    => '',
         ]);
 
         if(request('image')){
@@ -36,10 +36,10 @@ class ProfilesController extends Controller
             $image->save();
         }
 
-        auth()->user()->profile->update(array_merge([
+        auth()->user()->profile->update(array_merge(
             $data,
-            ['image' => $imagePath],
-        ]));
+            ['image' =>  $imagePath]
+        ));
 
         return redirect("/profile/{$user->id}");
     }

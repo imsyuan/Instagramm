@@ -24,8 +24,8 @@ class PostsController extends Controller
             'image'     =>  ['required', 'image'],
         ]);
 
+        //  Store image of the post
         $imagePath = request('image')->store('uploads', 'public');
-
         $image = Image::make(public_path("storage/{$imagePath}"))->fit(1200,1200);
         $image->save();
 

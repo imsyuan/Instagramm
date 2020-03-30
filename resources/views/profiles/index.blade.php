@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-3 p-5">
-            <img src="https://image.flaticon.com/icons/svg/733/733558.svg" style="height: 120px;" class="rounded-circle">
+            <img src="/storage/{{ $user->profile->image }}" style="height: 120px;" class="rounded-circle">
         </div>
         <div class="col-9 pt-5">
             <div class="d-flex justify-content-between align-items-baseline">

@@ -37,12 +37,16 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    // create a new user
-    // Eloquent event
+    /*
+     * After creating a user, it will init a profile for the user.
+     * Eloquent events - created
+     *
+     * */
     protected static function boot()
     {
         parent::boot();
 
+        // when you create a new user profile, tile will have default username.
         static::created(function ($user){
             $user->profile()->create([
                 'title' => $user->username,
