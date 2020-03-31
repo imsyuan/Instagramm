@@ -14,6 +14,7 @@
                 @endcan
             </div>
 
+            {{-- If login, then show the btn  --}}
             @can('update', $user->profile)
                 <a href="/profile/{{ $user->id }}/edit">Edit Profile</a>
             @endcan
