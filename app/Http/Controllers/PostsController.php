@@ -17,8 +17,9 @@ class PostsController extends Controller
     {
         // Get all users who you are following
         $users = auth()->user()->following()->pluck('profiles.user_id');
-        // Get all posts and order
-        $posts = Post::whereIn('user_id', $users)->latest()->get();
+
+        // Get all posts and order, and only show 5 posts
+        $posts = Post::whereIn('user_id', $users)->with('user')->latest()->paginate(5);
 
         return view('posts.index', compact('posts'));
     }
