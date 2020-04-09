@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Post;
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
 
@@ -10,6 +11,16 @@ class PostsController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+    }
+
+    public function index()
+    {
+        // Get all users who you are following
+        $users = auth()->user()->following()->pluck('profiles.user_id');
+        // Get all posts and order
+        $posts = Post::whereIn('user_id', $users)->latest()->get();
+
+        return view('posts.index', compact('posts'));
     }
 
     public function create()
@@ -25,7 +36,7 @@ class PostsController extends Controller
         ]);
 
         //  Store image of the post
-        $imagePath = request('image')->store('uploads', 'public');
+        $imagePath = request('image')->store('uploads', 'public');  // store image to public/uploads
         $image = Image::make(public_path("storage/{$imagePath}"))->fit(1200,1200);
         $image->save();
 
