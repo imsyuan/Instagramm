@@ -20,3 +20,5 @@ https://youtu.be/ImtZ5yENzgE
 <img width="1248" alt="instagramm-regeister" src="https://user-images.githubusercontent.com/8586464/78982779-709d1200-7b55-11ea-9292-d424493d849c.png">
 
 <img width="1256" alt="instagramm-login" src="https://user-images.githubusercontent.com/8586464/78982801-814d8800-7b55-11ea-92cd-cbd3afbf598f.png">
+
+<img width="1142" alt="instagramm-telescope" src="https://user-images.githubusercontent.com/8586464/78982937-bfe34280-7b55-11ea-9ba9-754329d23c63.png">
